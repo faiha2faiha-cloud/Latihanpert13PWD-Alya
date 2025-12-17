@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volume Bangun Ruang</title>
+</head>
+<body>
+
+<h3>Yuk mari kita Hitung Volume Bangun Ruang!!!</h3>
+<button onclick="hitung()">Hitung Volume</button>
+
+<script>
+function hitung() {
+    var pilih = prompt(
+        "Pilih bangun ruang:\n" +
+        "1. Balok\n" +
+        "2. Tabung\n" +
+        "3. Bola\n" +
+        "4. Prisma Segitiga\n" +
+        "5. Kerucut"
+    );
+
+    var hasil;
+
+    switch (pilih) {
+        case "1":
+            var p = prompt("Masukkan panjang:");
+            var l = prompt("Masukkan lebar:");
+            var t = prompt("Masukkan tinggi:");
+            hasil = p * l * t;
+            alert("Volume Balok = " + hasil);
+            break;
+
+        case "2":
+            var r = prompt("Masukkan jari-jari:");
+            var t = prompt("Masukkan tinggi:");
+            hasil = 3.14 * r * r * t;
+            alert("Volume Tabung = " + hasil);
+            break;
+
+        case "3":
+            var r = prompt("Masukkan jari-jari:");
+            hasil = 3.14 * r * r * r;
+            alert("Volume Bola = " + hasil);
+            break;
+
+        case "4":
+            var ta = prompt("Masukkan tinggi alas:");
+            var pa = prompt("Masukkan panjang alas:");
+            var tp = prompt("Masukkan tinggi prisma:");
+            hasil = 0.5 * ta * pa * tp;
+            alert("Volume Prisma Segitiga = " + hasil);
+            break;
+
+        case "5":
+            var r = prompt("Masukkan jari-jari alas:");
+            var t = prompt("Masukkan tinggi kerucut:");
+            hasil = (1/3) * 3.14 * r * r * t;
+            alert("Volume Kerucut = " + hasil);
+            break;
+
+        default:
+            alert("Pilihan tidak tersedia");
+    }
+}
+</script>
+
+</body>
+</html>
